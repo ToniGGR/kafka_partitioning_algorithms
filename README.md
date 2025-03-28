@@ -7,7 +7,7 @@ Dieses Java Spring Boot Projekt vergleicht die Partitionierungsalgorithmen **Rou
 Bevor die Spring Boot Anwendung gestartet werden kann, muss Apache Kafka installiert und konfiguriert sein. Die folgenden Schritte sind erforderlich:
 
 ### 1. Apache Kafka herunterladen und starten
-1. [Apache Kafka herunterladen](https://kafka.apache.org/downloads)
+1. [Apache Kafka herunterladen](https://kafka.apache.org/downloads) (Hier wurde die Binary Version von 3.9 heruntergeladen)
 2. In das Kafka-Verzeichnis wechseln
 3. Zookeeper starten:
    ```bash
