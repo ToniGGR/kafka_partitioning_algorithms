@@ -47,6 +47,4 @@ Bevor die Spring Boot Anwendung gestartet werden kann, muss Apache Kafka install
 |---------------|------|-----------------------------------------------|
 | message_count | Query | Anzahl der Daten, die von der DWD API gesendet werden sollen |
 
-## Fazit
-Dieses Projekt ermöglicht die Evaluierung der verschiedenen Partitionierungsstrategien in Apache Kafka und bietet eine Möglichkeit, die Performance hinsichtlich Latenz und Lastverteilung zu analysieren.
 
