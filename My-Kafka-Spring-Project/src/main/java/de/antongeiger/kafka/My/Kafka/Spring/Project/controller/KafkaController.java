@@ -49,28 +49,28 @@ public class KafkaController {
     }
 
     @PostMapping("/start-weather-test-round-robin")
-    public String start_weather_test_round_robin(@RequestParam("message") String message , @RequestParam("message_count") String message_count) {
+    public String start_weather_test_round_robin(@RequestParam("message_count") String message_count) {
 
         Integer int_message_count = Integer.valueOf(message_count);
         weatherProducer.sendMessages_round_robin("round-robin-topic" , int_message_count);
-        return "Message sent: " + message;
+        return "DWD API Calls sent" ;
     }
 
 
     @PostMapping("/start-weather-test-sticky")
-    public String start_weather_test_sticky(@RequestParam("message") String message , @RequestParam("message_count") String message_count) {
+    public String start_weather_test_sticky(@RequestParam("message_count") String message_count) {
 
         Integer int_message_count = Integer.valueOf(message_count);
         weatherProducer.sendMessages_sticky("sticky-topic" , int_message_count);
-        return "Message sent: " + message;
+        return "DWD API Calls sent";
     }
 
 
     @PostMapping("/start-weather-test-key-hash")
-    public String start_weather_test_key_hash(@RequestParam("message") String message , @RequestParam("message_count") String message_count) {
+    public String start_weather_test_key_hash(@RequestParam("message_count") String message_count) {
         Integer int_message_count = Integer.valueOf(message_count);
         weatherProducer.sendMessages_key_hash("key-hash-topic",  int_message_count);
-        return "Message sent: " + message;
+        return "DWD API Calls sent";
     }
 
 
