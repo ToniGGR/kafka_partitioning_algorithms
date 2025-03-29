@@ -48,3 +48,10 @@ Bevor die Spring Boot Anwendung gestartet werden kann, muss Apache Kafka install
 | message_count | Query | Anzahl der Daten, die von der DWD API gesendet werden sollen |
 
 
+### 3. Durchsatz Messung
+**API Call**
+`http://localhost:8080/init-bm`
+``` bash
+sh bin/kafka-producer-perf-test.sh --topic topic-one-partition --num-records 50000 --record-size 1000 --throughput 5000 --producer-props acks=1 bootstrap.servers=localhost:9092 buffer.memory=67108864 compresstion.type=none
+```
+
